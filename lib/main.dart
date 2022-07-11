@@ -17,23 +17,24 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.purple,
+        primarySwatch: Colors.indigo,
       ),
       home: const CustomBottomPage(title: 'Flutter Demo'),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+// 一般底部导航
+class NormalBottomPage extends StatefulWidget {
+  const NormalBottomPage({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<NormalBottomPage> createState() => _NormalBottomPageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _NormalBottomPageState extends State<NormalBottomPage> {
   int _currentIndex = 0;
   final _bottomIconColor = Colors.indigo;
   List<Widget> list = [];
@@ -76,6 +77,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
+// 自定义不规则底部导航
 class CustomBottomPage extends StatefulWidget {
   const CustomBottomPage({Key? key, required this.title}) : super(key: key);
 
@@ -93,7 +95,7 @@ class _CustomBottomPageState extends State<CustomBottomPage> {
   @override
   void initState() {
     list
-      ..add(const HomePage())
+      ..add(const ListPage())
       ..add(const MinePage());
     super.initState();
   }
