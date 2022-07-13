@@ -1,4 +1,5 @@
-import './route_demos.dart';
+import 'package:hello_flutter/pages/frosted_glass.dart';
+import 'package:hello_flutter/pages/route_demos.dart';
 import 'package:flutter/material.dart';
 
 class ListPage extends StatelessWidget {
@@ -8,7 +9,10 @@ class ListPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Widget divider = const Divider(color: Colors.black26);
-
+    final items = [
+      {'title': '路由动画', 'route': const RouteDemos()},
+      {'title': '毛玻璃效果', 'route': const FrostedGlassDemo()}
+    ];
     return Scaffold(
         appBar: AppBar(title: const Text('Demos')),
         body: ListView.separated(
@@ -17,22 +21,21 @@ class ListPage extends StatelessWidget {
           separatorBuilder: (BuildContext context, int index) {
             return divider;
           },
-          itemCount: 50,
+          itemCount: items.length,
           itemBuilder: (BuildContext builderContext, int index) {
+            Map item = items[index];
+            String title = item['title'];
+
             return ListTile(
                 onTap: () {
-                  if (index == 0) {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) {
-                        return const RouteDemos();
-                      }),
-                    );
-                  } else {
-                    print('点击 示例$index');
-                  }
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) {
+                      return item['route'];
+                    }),
+                  );
                 },
-                title: index > 0 ? Text('示例$index') : const Text('路由动画'));
+                title: Text(title));
           },
         ));
   }
