@@ -1,4 +1,5 @@
 import 'package:hello_flutter/pages/frosted_glass.dart';
+import 'package:hello_flutter/pages/keep_alive.dart';
 import 'package:hello_flutter/pages/route_demos.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +12,8 @@ class ListPage extends StatelessWidget {
     Widget divider = const Divider(color: Colors.black26);
     final items = [
       {'title': '路由动画', 'route': const RouteDemos()},
-      {'title': '毛玻璃效果', 'route': const FrostedGlassDemo()}
+      {'title': '毛玻璃效果', 'route': const FrostedGlassDemo()},
+      {'title': '保持页面状态', 'route': const KeepAliveDemo()}
     ];
     return Scaffold(
         appBar: AppBar(title: const Text('Demos')),
