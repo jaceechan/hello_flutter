@@ -72,6 +72,7 @@ class _KeepAliveInsideState extends State<KeepAliveInside>
 
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     return Scaffold(
         body: Center(
           child: Column(
