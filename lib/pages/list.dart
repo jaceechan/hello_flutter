@@ -1,6 +1,7 @@
+import 'package:hello_flutter/pages/search_bar.dart';
+import 'package:hello_flutter/pages/route_demos.dart';
 import 'package:hello_flutter/pages/frosted_glass.dart';
 import 'package:hello_flutter/pages/keep_alive.dart';
-import 'package:hello_flutter/pages/route_demos.dart';
 import 'package:flutter/material.dart';
 
 class ListPage extends StatelessWidget {
@@ -13,7 +14,8 @@ class ListPage extends StatelessWidget {
     final items = [
       {'title': '路由动画', 'route': const RouteDemos()},
       {'title': '毛玻璃效果', 'route': const FrostedGlassDemo()},
-      {'title': '保持页面状态', 'route': const KeepAliveDemo()}
+      {'title': '保持页面状态', 'route': const KeepAliveDemo()},
+      {'title': '搜索栏', 'route': const SearchBarDemo()},
     ];
     return Scaffold(
         appBar: AppBar(title: const Text('Demos')),
