@@ -1,3 +1,4 @@
+import 'package:hello_flutter/pages/flow_layout.dart';
 import 'package:hello_flutter/pages/search_bar.dart';
 import 'package:hello_flutter/pages/route_demos.dart';
 import 'package:hello_flutter/pages/frosted_glass.dart';
@@ -16,6 +17,7 @@ class ListPage extends StatelessWidget {
       {'title': '毛玻璃效果', 'route': const FrostedGlassDemo()},
       {'title': '保持页面状态', 'route': const KeepAliveDemo()},
       {'title': '搜索栏', 'route': const SearchBarDemo()},
+      {'title': '流式布局', 'route': const FlowLayoutDemo()},
     ];
     return Scaffold(
         appBar: AppBar(title: const Text('Demos')),
