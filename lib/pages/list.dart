@@ -5,6 +5,7 @@ import 'package:hello_flutter/pages/search_bar.dart';
 import 'package:hello_flutter/pages/route_demos.dart';
 import 'package:hello_flutter/pages/frosted_glass.dart';
 import 'package:hello_flutter/pages/keep_alive.dart';
+import 'package:hello_flutter/pages/custom_clipper.dart';
 import 'package:flutter/material.dart';
 
 class ListPage extends StatelessWidget {
@@ -22,6 +23,7 @@ class ListPage extends StatelessWidget {
       {'title': '流式布局', 'route': const FlowLayoutDemo()},
       {'title': '展开闭合', 'route': const ExpansionTileDemo()},
       {'title': '展开闭合列表', 'route': const ExpansionListDemo()},
+      {'title': '贝塞尔曲线切割', 'route': const CustomClipperDemo()},
     ];
     return Scaffold(
         appBar: AppBar(title: const Text('Demos')),
