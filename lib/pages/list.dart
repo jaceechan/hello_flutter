@@ -1,4 +1,5 @@
 import 'package:hello_flutter/pages/expansion_tile.dart';
+import 'package:hello_flutter/pages/expansion_list.dart';
 import 'package:hello_flutter/pages/flow_layout.dart';
 import 'package:hello_flutter/pages/search_bar.dart';
 import 'package:hello_flutter/pages/route_demos.dart';
@@ -20,6 +21,7 @@ class ListPage extends StatelessWidget {
       {'title': '搜索栏', 'route': const SearchBarDemo()},
       {'title': '流式布局', 'route': const FlowLayoutDemo()},
       {'title': '展开闭合', 'route': const ExpansionTileDemo()},
+      {'title': '展开闭合列表', 'route': const ExpansionListDemo()},
     ];
     return Scaffold(
         appBar: AppBar(title: const Text('Demos')),
