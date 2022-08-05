@@ -18,7 +18,7 @@ class _SplashScreenDemoState extends State<SplashScreenDemo>
   void initState() {
     super.initState();
     _controller = AnimationController(
-        vsync: this, duration: const Duration(milliseconds: 3000));
+        vsync: this, duration: const Duration(milliseconds: 10000));
     _animation = Tween(begin: 0.0, end: 1.0).animate(_controller);
 
     _animation.addStatusListener((status) {
@@ -43,7 +43,6 @@ class _SplashScreenDemoState extends State<SplashScreenDemo>
   Widget build(BuildContext context) {
     return FadeTransition(
       opacity: _controller,
-      // [FIXME]这个图片不知道为什么显示不出来...
       child: Image.network('http://pic1.win4000.com/pic/d/67/e9ca2834b3.jpg',
           width: window.physicalSize.width,
           height: window.physicalSize.height,
