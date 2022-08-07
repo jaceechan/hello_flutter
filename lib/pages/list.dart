@@ -1,3 +1,4 @@
+import 'package:hello_flutter/pages/long_list.dart';
 import 'package:hello_flutter/pages/expansion_tile.dart';
 import 'package:hello_flutter/pages/expansion_list.dart';
 import 'package:hello_flutter/pages/flow_layout.dart';
@@ -26,6 +27,7 @@ class ListPage extends StatelessWidget {
       {'title': '展开闭合列表', 'route': const ExpansionListDemo()},
       {'title': '贝塞尔曲线切割', 'route': const CustomClipperDemo()},
       {'title': '右滑返回', 'route': const RightBackDemo()},
+      {'title': '长列表', 'route': LongListDemo()},
     ];
     return Scaffold(
         appBar: AppBar(title: const Text('Demos')),
